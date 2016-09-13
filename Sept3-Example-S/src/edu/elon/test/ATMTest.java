@@ -54,8 +54,8 @@ public class ATMTest {
 		double balance = 100;
 		atm = new ATM(balance);
 		NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
-		String expected = "Amount balance is " + currencyFormat.format(balance);
-		String actual = "Amount balance is $100.00";
+		String actual = "Amount balance is " + currencyFormat.format(balance);
+		String expected = "Amount balance is $100.00";
 		assertEquals(actual, expected);
 	}
 	
