@@ -2,6 +2,8 @@ package edu.elon.test;
 
 import static org.junit.Assert.*;
 
+import java.text.NumberFormat;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -49,7 +51,12 @@ public class ATMTest {
 
 	@Test
 	public void testToString() {
-		fail("Not yet implemented");
+		double balance = 100;
+		atm = new ATM(balance);
+		NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
+		String expected = "Amount balance is " + currencyFormat.format(balance);
+		String actual = "Amount balance is $100.00";
+		assertEquals(actual, expected);
 	}
 	
 	@Test
